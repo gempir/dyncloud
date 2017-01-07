@@ -42,7 +42,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	resp, _ := httpRequest("https://api.ipify.org/?format=raw")
+	resp, _ := httpRequest("https://api.ipify.org")
 	publicIP := string(resp[:])
 
 	dnsRecord.Content = publicIP
